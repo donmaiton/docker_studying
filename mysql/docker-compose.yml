@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  mysql:
+    build: ./
+    image: dev-mysql-server
+    container_name: dev-mysql-server
+    volumes:
+      - ./db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    
