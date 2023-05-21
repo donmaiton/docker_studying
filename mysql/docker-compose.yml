@@ -5,6 +5,8 @@ services:
     build: ./
     image: dev-mysql-server
     container_name: dev-mysql-server
+    ports:
+      - 3306:3306
     volumes:
       - ./db:/var/lib/mysql
     environment:
